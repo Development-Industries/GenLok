@@ -1,0 +1,363 @@
+/* Global Settings */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 450px; /* Set width to be consistent across various screens */
+    height: 500px; /* Set height to maintain a compact and functional popup */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background: url('MainBG.png') no-repeat center center; /* Background image set for all pages */
+    background-size: cover;
+    top: 50px; /* Position from the top of the screen */
+    right: 20px; /* Position from the right of the screen */
+}
+
+/* Main container styling */
+.container {
+    width: 100%; /* Use full width of the body */
+    height: 100%; /* Use full height of the body */
+    padding: 20px; /* Padding around content within the container */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Align items centrally for a neat layout */
+    text-align: center; /* Center the text inside the container */
+    color: #FFFFFF; /* White text for better readability on dark background */
+    background: rgba(0, 0, 0, 0.75); /* Semi-transparent black background for content visibility */
+    border-radius: 8px; /* Rounded corners for aesthetic enhancement */
+}
+
+/* Typography and buttons */
+h1 {
+    font-size: 24px; /* Large enough for headings to stand out */
+    color: #FFF; /* White color for headings */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+input[type="text"], input[type="number"], select, button {
+    width: 90%; /* Responsive width with a little margin */
+    padding: 10px; /* Comfortable padding inside inputs and buttons */
+    margin-bottom: 10px; /* Space below each element */
+    border: none; /* No border for a cleaner look */
+    border-radius: 5px; /* Rounded corners for inputs and buttons */
+    font-size: 16px; /* Readable font size */
+    background-color: #FFFFFF; /* White background for inputs to ensure visibility */
+}
+
+button {
+    background-color: #007bff; /* Bright blue background for buttons */
+    color: white; /* White text on buttons for contrast */
+    cursor: pointer; /* Pointer cursor on hover to indicate clickable */
+}
+
+    button:hover {
+        background-color: #0056b3; /* Darker blue on hover for interactive feedback */
+    }
+
+/* Media queries for responsive layouts */
+@media (max-width: 450px) {
+    body, html {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Auto-adjust height based on content */
+        right: 0; /* Reset right position for small screens */
+        top: 0; /* Reset top position for small screens */
+    }
+}
+/* ===================== Saved Passwords Page Styling ===================== */
+
+
+/* Container Styling for Saved Passwords Page */
+.saved-passwords-screen .container {
+    max-width: 500px; /* Set width to a manageable size */
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Light transparent background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-image: url('SavedBG.png'); /* Background image for saved page */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center;
+}
+
+/* Title Styling (Center and Blue) */
+.saved-passwords-screen h1 {
+    color: #007bff; /* Blue title */
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styling each saved password entry */
+.saved-item {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Left align items */
+    justify-content: center;
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 8px;
+    margin: 15px 0;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+    border: 1px solid #ddd;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Allow space on the right */
+    max-width: 400px;
+}
+
+/* Label (Name) for Saved Passwords */
+.password-label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #007bff; /* Blue for clarity */
+    margin-bottom: 10px; /* Spacing between name and password */
+    text-align: left;
+    width: 100%;
+}
+
+/* Password Text Styling */
+.password-text {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px; /* Spacing between password and delete button */
+    word-break: break-all; /* Prevents password overflow */
+    text-align: left;
+    cursor: pointer; /* To allow easy copy */
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+/* Delete Button Styling */
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .delete-btn:hover {
+        background-color: #ff1a1a; /* Darker red on hover */
+    }
+
+/* Hover effect for saved items */
+.saved-item:hover {
+    background-color: #f0f8ff; /* Light blue on hover */
+}
+
+/* Button styling for navigation */
+button.back-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+    button.back-btn:hover {
+        background-color: #0056b3;
+    }
+/* ================= Membership Page Styling ================= */
+.membership-screen .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Light transparent background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-image: url('MembershipBG.png'); /* Use MembershipBG.png */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Membership Page Title */
+.membership-screen h1 {
+    color: #ffffff; /* White title */
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Membership Tier Box */
+.membership-tier {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9; /* Light background for each tier */
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+    .membership-tier:hover {
+        background-color: rgba(0, 123, 255, 0.1); /* Subtle blue on hover */
+    }
+
+/* Membership Tier Logo */
+.tier-logo {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Membership Tier Info */
+.tier-info h2 {
+    color: #333;
+    font-size: 22px;
+    margin: 0;
+    padding-bottom: 5px;
+}
+
+.tier-info p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Select Button for Each Membership Tier */
+.select-btn {
+    background-color: #007bff; /* Blue button for selecting membership */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+    .select-btn:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+/* Back to Generator Button */
+.back-btn {
+    background-color: #007bff; /* Blue button for back navigation */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+    .back-btn:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
+
+/* Add responsive styling for smaller devices */
+@media (max-width: 600px) {
+    .membership-screen .container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .membership-tier {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tier-logo {
+        margin-bottom: 10px;
+    }
+
+    .select-btn, .back-btn {
+        width: 100%; /* Full-width buttons on mobile */
+        margin-top: 10px;
+    }
+}
+/* ===================== Settings Page Styling ===================== */
+.settings-screen .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Light transparent background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.settings-screen h1 {
+    color: #007bff; /* Blue title */
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.settings-group {
+    margin-bottom: 20px;
+}
+
+    .settings-group label {
+        display: block;
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .settings-group select, .settings-group input[type="color"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        margin-bottom: 15px;
+    }
+
+/* Save Button Styling */
+.save-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+    .save-btn:hover {
+        background-color: #0056b3;
+    }
+
+/* Back Button Styling */
+.back-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+    .back-btn:hover {
+        background-color: #0056b3;
+    }
+
+/* Body Background Customization */
+body {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Dynamically apply button color */
+button {
+    transition: background-color 0.3s ease;
+}

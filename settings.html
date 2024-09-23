@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="settings-screen">
+    <div class="container">
+        <h1>Settings</h1>
+
+        <!-- Background Selection -->
+        <div class="settings-group">
+            <label for="backgroundSelect">Choose Background:</label>
+            <select id="backgroundSelect">
+                <option value="BG1.png">Starry Nights</option>
+                <option value="BG2.png">City Burn</option>
+                <option value="BG3.png">Mountain Sunrise</option>
+                <option value="BG4.png">Forest Walk</option>
+                <option value="MainBG.png">Icy Sky</option>
+                <option value="MembershipBG.png">Tech Slide</option>
+                <option value="SavedBG.png">Calm Days</option>
+                <option value="SettingsBG.png">Blue Minimal</option>
+            </select>
+        </div>
+
+        <!-- Button Color Selection -->
+        <div class="settings-group">
+            <label for="buttonColor">Select Button Color:</label>
+            <input type="color" id="buttonColor" value="#007bff">
+        </div>
+
+        <button id="saveSettingsBtn" class="save-btn">Save Settings</button>
+        <button class="back-btn" id="backToGeneratorBtn">Back to Generator</button>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>
